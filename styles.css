@@ -144,10 +144,11 @@ nav{
 .output-translation-text{
     margin-top: 1.2rem;
     background-color: rgb(245, 235, 235);
-    height: 12rem;
+    height: 16rem;
     width: 100%;
     border-radius: 0.5rem;
     border: 2px solid lightblue;
+    display: block;
 }
 
 .input-translation-text input,
@@ -165,22 +166,20 @@ input:focus{
 }
 
 .ISL-Sign-section{
-    margin-top: 1.4rem;
-    align-self: center;
-    background-color: rgb(245, 235, 235);
-    height: 16rem;
-    width: 50%;
-    border-radius: 0.5rem;
-    border: 2px solid lightblue;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(245, 235, 235);
+    border: 1px solid lightblue;
+    border-radius: 0.5rem;
 }
 
-.ISL-Sign-section span{
-    font-size: 2rem;
-    font-family: 'Nerko One';
-    color: blue;
+#video{
+   /* transform: translateY(-32%); */
+   height: 16rem;
+   width: 600px;
+   border-radius: 0.5rem    ;
 }
 
 .hide{
