@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Platform, StatusBar, SafeAreaView, StyleSheet} from 'react-native';
+import NavView from './component/NavView';
+import CameraPanel from './component/CameraPanel';
+import Translation from './component/Translation';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <NavView />
+      <CameraPanel />
+      <Translation />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    maxWidth: "100%",
+    maxHeight: "100%",
+    justifyContent: "space-between"
+  }
 });
